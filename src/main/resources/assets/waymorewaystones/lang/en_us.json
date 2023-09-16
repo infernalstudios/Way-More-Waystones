@@ -1,4 +1,24 @@
 {
   "item.waymorewaystones.blackstone_waystone": "Blackstone Waystone",
-  "block.waymorewaystones.blackstone_waystone": "Blackstone Waystone"
+  "block.waymorewaystones.blackstone_waystone": "Blackstone Waystone",
+  "item.waymorewaystones.crying_obsidian_waystone": "",
+  "block.waymorewaystones.crying_obsidian_waystone": "",
+  "item.waymorewaystones.deepslate_waystone": "",
+  "block.waymorewaystones.deepslate_waystone": "",
+  "item.waymorewaystones.geode_waystone": "",
+  "block.waymorewaystones.geode_waystone": "",
+  "item.waymorewaystones.glass_waystone": "",
+  "block.waymorewaystones.glass_waystone": "",
+  "item.waymorewaystones.glowstone_waystone": "",
+  "block.waymorewaystones.glowstone_waystone": "",
+  "item.waymorewaystones.mossy_waystone": "",
+  "block.waymorewaystones.mossy_waystone": "",
+  "item.waymorewaystones.nether_brick_chisel_waystone": "",
+  "block.waymorewaystones.nether_brick_chisel_waystone": "",
+  "item.waymorewaystones.nether_brick_waystone": "",
+  "block.waymorewaystones.nether_brick_waystone": "",
+  "item.waymorewaystones.prismarine_waystone": "",
+  "block.waymorewaystones.prismarine_waystone": "",
+  "item.waymorewaystones.purpur_waystone": "",
+  "block.waymorewaystones.purpur_waystone": ""
 }

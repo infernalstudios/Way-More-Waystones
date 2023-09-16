@@ -1,0 +1,7 @@
+{
+  "parent": "waystones:block/waystone_top",
+  "textures": {
+    "particle": "waymorewaystones:block/purpur_waystone",
+    "texture": "waymorewaystones:block/purpur_waystone"
+  }
+}

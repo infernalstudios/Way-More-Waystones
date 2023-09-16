@@ -1,0 +1,7 @@
+{
+  "parent": "waystones:block/waystone_bottom",
+  "textures": {
+    "particle": "waymorewaystones:block/glowstone_waystone",
+    "texture": "waymorewaystones:block/glowstone_waystone"
+  }
+}

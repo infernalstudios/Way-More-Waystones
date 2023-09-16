@@ -40,8 +40,16 @@ public class WayMoreWaystones
     public static class Blocks {
         public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, WayMoreWaystones.MOD_ID);
         
-        public static final RegistryObject<Block> BLACKSTONE_WAYSTONE = registerBlockWithDefaultItem("blackstone_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
-        
+        public static final RegistryObject<Block> CRYING_OBSIDIAN_WAYSTONE = registerBlockWithDefaultItem("crying_obsidian_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
+        public static final RegistryObject<Block> DEEPSLATE_WAYSTONE = registerBlockWithDefaultItem("deepslate_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
+        public static final RegistryObject<Block> GEODE_WAYSTONE = registerBlockWithDefaultItem("geode_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));     
+        public static final RegistryObject<Block> GLASS_WAYSTONE = registerBlockWithDefaultItem("glass_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));     
+        public static final RegistryObject<Block> GLOWSTONE_WAYSTONE = registerBlockWithDefaultItem("glowstone_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
+        public static final RegistryObject<Block> MOSSY_WAYSTONE = registerBlockWithDefaultItem("mossy_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));     
+        public static final RegistryObject<Block> NETHER_BRICK_CHISEL_WAYSTONE = registerBlockWithDefaultItem("nether_brick_chisel_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
+        public static final RegistryObject<Block> NETHER_BRICK_WAYSTONE = registerBlockWithDefaultItem("nether_brick_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
+        public static final RegistryObject<Block> PRISMARINE_WAYSTONE = registerBlockWithDefaultItem("prismarine_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
+        public static final RegistryObject<Block> PURPUR_WAYSTONE = registerBlockWithDefaultItem("purpur_waystone", () -> new WaystoneBlock(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(5f, 2000f)));
 
         public static <T extends Block> RegistryObject<T> registerBlockWithDefaultItem(String name, Supplier<? extends T> blockSupplier) {
             RegistryObject<T> block = BLOCKS.register(name, blockSupplier);
