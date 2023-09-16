@@ -1,0 +1,25 @@
+{
+  "result": {
+    "item": "waymorewaystones:geode_waystone"
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "SWS",
+    "OOO"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_block"
+    },
+    "S": {
+      "item": "minecraft:smooth_basalt"
+    },
+    "W": {
+      "item": "waystones:warp_stone"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  }
+}

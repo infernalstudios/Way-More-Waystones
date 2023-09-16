@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.blay09.mods.waystones.block.WaystoneBlock;
+import static net.blay09.mods.waystones.item.ModItems.creativeModeTab;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(WayMoreWaystones.MOD_ID)
@@ -53,7 +54,7 @@ public class WayMoreWaystones
 
         public static <T extends Block> RegistryObject<T> registerBlockWithDefaultItem(String name, Supplier<? extends T> blockSupplier) {
             RegistryObject<T> block = BLOCKS.register(name, blockSupplier);
-            WayMoreWaystones.Items.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+            WayMoreWaystones.Items.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(creativeModeTab)));
             return block;
         }
     }

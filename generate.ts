@@ -52,6 +52,30 @@ const getItemmodel = (id: string) =>
     }
   }, null, 2) + "\n";
 
+const getRecipe = (id: string) => 
+  JSON.stringify({
+    "result": {
+      "item": "waymorewaystones:" + id
+    },
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " S ",
+      "SWS",
+      "OOO"
+    ],
+    "key": {
+      "S": {
+        "item": ""
+      },
+      "W": {
+        "item": "waystones:warp_stone"
+      },
+      "O": {
+        "item": "minecraft:obsidian"
+      }
+    }
+  }, null, 2) + "\n";
+
 const newIds = [];
 
 for (let i = 0; i < args.length; i++) {
@@ -67,18 +91,28 @@ for (let i = 0; i < args.length; i++) {
   if (!await Bun.file(`./src/main/resources/assets/waymorewaystones/textures/block/${id}.png`).exists()) {
     console.log(`Need to provide textures for ${id}`);
   }
-
-  if (!lang['item.waymorewaystones.' + id] || !lang['block.waymorewaystones.' + id]) {
-    console.log(`Need to provide lang for ${id}`);
-    lang['item.waymorewaystones.' + id] = "";
-    lang['block.waymorewaystones.' + id] = "";
+  
+  if (!await Bun.file(`./src/main/resources/data/waymorewaystones/recipes/${id}.json`).exists()) {
+    console.log(`Fix up recipe for ${id}`);
   }
+
+  Bun.write(`./src/main/resources/data/waymorewaystones/recipes/${id}.json`, getRecipe(id));
 
   newIds.push(id);
 }
 
 if (newIds.length !== 0) {
   console.log("Updating lang file");
+
+  for (const id of newIds) {
+    if (!lang['item.waymorewaystones.' + id] || !lang['block.waymorewaystones.' + id]) {
+      const name = id.split("_").map((s) => s[0].toUpperCase() + s.slice(1)).join(" ");
+      console.log(`Check lang for ${id}: ${name}`);
+      lang['item.waymorewaystones.' + id] = name;
+      lang['block.waymorewaystones.' + id] = name;
+    }
+  }
+  
   Bun.write(langFile, JSON.stringify(lang, null, 2) + "\n");
 
   console.log("Add these to WayMoreWaystones.java:\n");
