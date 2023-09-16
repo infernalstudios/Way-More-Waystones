@@ -23,7 +23,7 @@ const getBlockstate = (id: string) =>
       "facing=west,half=upper": { "model": "waymorewaystones:block/" + id + "_top", "y": 180 },
       "facing=north,half=upper": { "model": "waymorewaystones:block/" + id + "_top", "y": 270 }
     }
-  }, null, 2);
+  }, null, 2) + "\n";
 
 const getBlockmodelBottom = (id: string) =>
   JSON.stringify({
@@ -32,7 +32,7 @@ const getBlockmodelBottom = (id: string) =>
       "particle": "waymorewaystones:block/" + id,
       "texture": "waymorewaystones:block/" + id,
     }
-  }, null, 2);
+  }, null, 2) + "\n";
 
 const getBlockmodelTop = (id: string) =>
   JSON.stringify({
@@ -41,7 +41,7 @@ const getBlockmodelTop = (id: string) =>
       "particle": "waymorewaystones:block/" + id,
       "texture": "waymorewaystones:block/" + id,
     }
-  }, null, 2);
+  }, null, 2) + "\n";
 
 const getItemmodel = (id: string) =>
   JSON.stringify({
@@ -50,7 +50,7 @@ const getItemmodel = (id: string) =>
       "particle": "waymorewaystones:block/" + id,
       "texture": "waymorewaystones:block/" + id
     }
-  }, null, 2);
+  }, null, 2) + "\n";
 
 const newIds = [];
 
@@ -79,7 +79,7 @@ for (let i = 0; i < args.length; i++) {
 
 if (newIds.length !== 0) {
   console.log("Updating lang file");
-  Bun.write(langFile, JSON.stringify(lang, null, 2));
+  Bun.write(langFile, JSON.stringify(lang, null, 2) + "\n");
 
   console.log("Add these to WayMoreWaystones.java:\n");
   for (const id of newIds) {
